@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:ott_photo_play/view/login/register_view.dart';
 
 import '../../common/color_extension.dart';
 import '../../common_widget/round_button.dart';
 import '../../common_widget/round_text_field.dart';
+import 'forgot_password_view.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({super.key});
@@ -107,7 +109,12 @@ class _LoginViewState extends State<LoginView> {
                     obscureText: true,
                     controller: txtPassword,
                     right: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                         Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const ForgotPasswordView()));
+                      },
                       child: Text(
                         "FORGOT?",
                         style: TextStyle(
@@ -190,7 +197,9 @@ class _LoginViewState extends State<LoginView> {
                   ),
 
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const RegisterView() ));
+                    },
                     child: Text(
                       "REGISTER",
                       style: TextStyle(

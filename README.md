@@ -7,6 +7,7 @@
 - [Youtube Channel Subscribe: @codeforany](https://www.youtube.com/channel/UCdQTp9wRK5vAOlEQZf9PHSg?sub_confirmation=1)
 
 - [Youtube Video Part-1: App Induction & Login UI ](https://youtu.be/4Yr8NaQ-Gz0)
+- [Youtube Video Part-2: Register & Forgot Password UI ](https://youtu.be/NbIwawfPh6A)
 
 UI UX App Design by: [Tasun Prasad](https://www.behance.net/gallery/83595081/Photo-Play-UI-Kit-For-FREE)
 
