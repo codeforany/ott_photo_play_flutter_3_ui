@@ -10,25 +10,28 @@ class RoundButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 50,
-      decoration: BoxDecoration(
-          gradient: LinearGradient(
-              colors: TColor.primaryG,
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter),
-          borderRadius: BorderRadius.circular(9), boxShadow: TColor.tModeDark ? null :  [
-            BoxShadow(
-              color: TColor.primary1.withOpacity(0.5),
-              blurRadius: 6,
-              offset: const Offset(0, 4)
-            )
-          ] ),
-        alignment: Alignment.center,
-      child: Text(
-        title,
-        style: TextStyle(
-            color: TColor.btnText, fontSize: 14, fontWeight: FontWeight.w700),
+    return InkWell(
+      onTap: onPressed,
+      child: Container(
+        height: 50,
+        decoration: BoxDecoration(
+            gradient: LinearGradient(
+                colors: TColor.primaryG,
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter),
+            borderRadius: BorderRadius.circular(9), boxShadow: TColor.tModeDark ? null :  [
+              BoxShadow(
+                color: TColor.primary1.withOpacity(0.5),
+                blurRadius: 6,
+                offset: const Offset(0, 4)
+              )
+            ] ),
+          alignment: Alignment.center,
+        child: Text(
+          title,
+          style: TextStyle(
+              color: TColor.btnText, fontSize: 14, fontWeight: FontWeight.w700),
+        ),
       ),
     );
   }

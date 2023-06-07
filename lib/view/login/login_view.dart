@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ott_photo_play/view/login/register_view.dart';
+import 'package:ott_photo_play/view/main_tab/main_tab_view.dart';
 
 import '../../common/color_extension.dart';
 import '../../common_widget/round_button.dart';
@@ -129,7 +130,13 @@ class _LoginViewState extends State<LoginView> {
                   ),
                   RoundButton(
                     title: "LOGIN",
-                    onPressed: () {},
+                    onPressed: () {
+                       Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  const MainTabView()));
+                    },
                   ),
                   const SizedBox(
                     height: 25,
