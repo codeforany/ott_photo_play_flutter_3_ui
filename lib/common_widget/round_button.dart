@@ -5,15 +5,16 @@ import '../common/color_extension.dart';
 class RoundButton extends StatelessWidget {
   final VoidCallback onPressed;
   final String title;
+  final double height;
 
-  const RoundButton({super.key, required this.title, required this.onPressed});
+  const RoundButton({super.key, required this.title, required this.onPressed, this.height = 50.0});
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onPressed,
       child: Container(
-        height: 50,
+        height: height,
         decoration: BoxDecoration(
             gradient: LinearGradient(
                 colors: TColor.primaryG,

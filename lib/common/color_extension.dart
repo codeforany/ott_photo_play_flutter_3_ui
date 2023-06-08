@@ -11,10 +11,13 @@ class TColor {
   static Color get bgDark => const Color(0xff000000);
   static Color get bgLight => const Color(0xffF5F5F5);
   static Color get bg => tModeDark ?  bgDark : bgLight;
+  static Color get bgText => tModeDark ? bgLight : bgDark ;
 
   static Color get cardDark => const Color(0xff212121);
   static Color get cardLight => const Color(0xffFFFFFF);
+  static Color get cardLightGry => const Color(0xffE8E8E8);
   static Color get card => tModeDark ? cardDark : cardLight;
+  static Color get castBG => tModeDark ? cardDark : cardLightGry;
 
 
   static Color get tabBGDark => const Color(0xff1A1A1A);
