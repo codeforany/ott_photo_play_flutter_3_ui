@@ -2,6 +2,7 @@ import 'package:fbroadcast/fbroadcast.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:ott_photo_play/common/color_extension.dart';
+import 'package:ott_photo_play/view/home/tv_show_details_view.dart';
 
 import 'movie_details_view.dart';
 
@@ -181,15 +182,20 @@ class _HomeViewState extends State<HomeView> {
                   scrollDirection: Axis.horizontal,
                   itemCount: watchArr.length,
                   itemBuilder: (context, index) {
-                    return Container(
-                      margin: const EdgeInsets.symmetric(horizontal: 6),
-                      color: TColor.card,
-                      child: ClipRect(
-                        child: Image.asset(
-                          watchArr[index].toString(),
-                          width: media.width * 0.33,
-                          height: media.width * 0.45,
-                          fit: BoxFit.cover,
+                    return InkWell(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => const TvShowDetailsView() ));
+                      },
+                      child: Container(
+                        margin: const EdgeInsets.symmetric(horizontal: 6),
+                        color: TColor.card,
+                        child: ClipRect(
+                          child: Image.asset(
+                            watchArr[index].toString(),
+                            width: media.width * 0.33,
+                            height: media.width * 0.45,
+                            fit: BoxFit.cover,
+                          ),
                         ),
                       ),
                     );
@@ -215,7 +221,11 @@ class _HomeViewState extends State<HomeView> {
                   scrollDirection: Axis.horizontal,
                   itemCount: watchArr.length,
                   itemBuilder: (context, index) {
-                    return Container(
+                    return  InkWell(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => const TvShowDetailsView() ));
+                      },
+                      child: Container(
                       margin: const EdgeInsets.symmetric(horizontal: 6),
                       color: TColor.card,
                       child: ClipRect(
@@ -226,7 +236,7 @@ class _HomeViewState extends State<HomeView> {
                           fit: BoxFit.cover,
                         ),
                       ),
-                    );
+                    ),);
                   }),
             ),
             Padding(
@@ -249,7 +259,11 @@ class _HomeViewState extends State<HomeView> {
                   scrollDirection: Axis.horizontal,
                   itemCount: watchArr.length,
                   itemBuilder: (context, index) {
-                    return Container(
+                    return  InkWell(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => const TvShowDetailsView() ));
+                      },
+                      child:Container(
                       margin: const EdgeInsets.symmetric(horizontal: 6),
                       color: TColor.card,
                       child: ClipRect(
@@ -260,7 +274,7 @@ class _HomeViewState extends State<HomeView> {
                           fit: BoxFit.cover,
                         ),
                       ),
-                    );
+                    ),);
                   }),
             )
           ],

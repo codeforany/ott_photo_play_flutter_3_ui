@@ -11,6 +11,7 @@
 - [Youtube Video Part-2: Register & Forgot Password UI ](https://youtu.be/NbIwawfPh6A)
 - [Youtube Video Part-3: Bottom TabView & Home Tab UI ](https://youtu.be/kJzs1aPkacE)
 - [Youtube Video Part-4: Movie Detail UI ](https://youtu.be/5viFsYqvyro)
+- [Youtube Video Part-5: Cast Detail UI & Tv Show Detail UI ](https://youtu.be/Te49DFdgV8s)
 
 UI UX App Design by: [Tasun Prasad](https://www.behance.net/gallery/83595081/Photo-Play-UI-Kit-For-FREE)
 

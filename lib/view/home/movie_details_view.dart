@@ -4,6 +4,7 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:ott_photo_play/common/color_extension.dart';
 
 import '../../common_widget/round_button.dart';
+import 'cast_details_view.dart';
 
 class MovieDetailsView extends StatefulWidget {
   const MovieDetailsView({super.key});
@@ -256,35 +257,40 @@ class _MovieDetailsViewState extends State<MovieDetailsView> {
                           var cObj = castArr[index] as Map? ?? {};
                           var image = cObj["image"].toString();
           
-                          return Column(
-                            children: [
-                              Container(
-                                margin: const EdgeInsets.symmetric(horizontal: 6),
-                                color: TColor.castBG,
-                                width: media.width * 0.25,
-                                height: media.width * 0.32,
-                                child: image != ""
-                                    ? ClipRect(
-                                        child: Image.asset(
-                                          image,
-                                          width: media.width * 0.25,
-                                          height: media.width * 0.32,
-                                          fit: BoxFit.contain,
-                                        ),
-                                      )
-                                    : null,
-                              ),
-                              const SizedBox(
-                                height: 4,
-                              ),
-                              Text(
-                                cObj["name"].toString(),
-                                style: TextStyle(
-                                  color: TColor.text,
-                                  fontSize: 12,
+                          return InkWell(
+                            onTap: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => const CastDetailsView() ));
+                            },
+                            child: Column(
+                              children: [
+                                Container(
+                                  margin: const EdgeInsets.symmetric(horizontal: 6),
+                                  color: TColor.castBG,
+                                  width: media.width * 0.25,
+                                  height: media.width * 0.32,
+                                  child: image != ""
+                                      ? ClipRect(
+                                          child: Image.asset(
+                                            image,
+                                            width: media.width * 0.25,
+                                            height: media.width * 0.32,
+                                            fit: BoxFit.contain,
+                                          ),
+                                        )
+                                      : null,
                                 ),
-                              ),
-                            ],
+                                const SizedBox(
+                                  height: 4,
+                                ),
+                                Text(
+                                  cObj["name"].toString(),
+                                  style: TextStyle(
+                                    color: TColor.text,
+                                    fontSize: 12,
+                                  ),
+                                ),
+                              ],
+                            ),
                           );
                         }),
                   ),
