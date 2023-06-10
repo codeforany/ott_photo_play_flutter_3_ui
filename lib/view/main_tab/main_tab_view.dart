@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:ott_photo_play/common/color_extension.dart';
+import 'package:ott_photo_play/view/download/download_view.dart';
 import 'package:ott_photo_play/view/home/home_view.dart';
 import 'package:fbroadcast/fbroadcast.dart';
+import 'package:ott_photo_play/view/profile/profile_view.dart';
+
+import '../search/search_view.dart';
 
 class MainTabView extends StatefulWidget {
   const MainTabView({super.key});
@@ -27,24 +31,22 @@ class _MainTabViewState extends State<MainTabView>
       }
     });
     FBroadcast.instance().register("change_mode", (value, callback) {
-        if(mounted){
-          setState(() {
-            
-          });
-        }
+      if (mounted) {
+        setState(() {});
+      }
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: TabBarView(controller: controller, children: [
-        const HomeView(),
-        Container(),
-        Container(),
-        Container(),
+      body: TabBarView(controller: controller, children: const [
+        HomeView(),
+        SearchView(),
+        DownloadView(),
+        ProfileView(),
       ]),
-       backgroundColor: TColor.bg,
+      backgroundColor: TColor.bg,
       floatingActionButton: FloatingActionButton(
         backgroundColor: TColor.primary1,
         onPressed: () {
